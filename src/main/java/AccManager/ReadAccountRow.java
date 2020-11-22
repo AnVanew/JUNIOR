@@ -1,12 +1,15 @@
 package AccManager;
 
-import DepManager.ReadDepositeRow;
-
+/**
+ * Класс представляет собой прочитанную строку аккаунта из CVS файла.
+ * Является вспомогательным классом.
+ */
 public class ReadAccountRow {
-        private String userName;
-        private String password;
 
-        public ReadAccountRow(){}
+    private String userName;
+    private String password;
+
+    public ReadAccountRow(){}
 
     public ReadAccountRow(String userName, String password) {
         this.userName = userName;
@@ -17,12 +20,12 @@ public class ReadAccountRow {
         return userName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
     public String getPassword() {
         return password;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void setPassword(String password) {

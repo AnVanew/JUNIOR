@@ -2,6 +2,7 @@ package AccManager;
 
 import ManageExeptions.AccException;
 import ManageExeptions.AuthException;
+import ManageExeptions.EqualAccException;
 
 import java.util.Date;
 import java.util.List;
@@ -11,7 +12,7 @@ public interface AccountManager {
     /*
       Метод добавляет нового пользователя системы
      */
-    void addAccount(String userName, String password) throws AccException;
+    void addAccount(String userName, String password) throws AccException, EqualAccException;
 
     /*
       Метод удаляет пользователя системы

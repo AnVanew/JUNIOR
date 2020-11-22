@@ -1,102 +1,90 @@
 package DepManager;
 
+/**
+ * Класс представляет собой прочитанную строку депозита из CVS файла
+ * без поля client.
+ * Является вспомогательным классом.
+ */
 public class ReadDepositeRow {
-        private String Passport;
-        private String FirstName;
-        private String LastName;
-        private String Ammount;
-        private String Percent;
-        private String PretermPercent;
-        private String TermDays;
-        private String StartDate;
-        private String WithPercentCapitalization;
+    private String Passport;
+    private String FirstName;
+    private String LastName;
+    private String Ammount;
+    private String Percent;
+    private String PretermPercent;
+    private String TermDays;
+    private String StartDate;
+    private String WithPercentCapitalization;
 
+    public String getPassport() {
+        return Passport;
+    }
 
-        public ReadDepositeRow() {
-        }
+    public void setPassport(String passport) {
+        Passport = passport;
+    }
 
-        public ReadDepositeRow(String passport, String firstName, String lastName, String ammount, String percent, String pretermPercent, String termDays, String startDate, String withPercentCapitalization) {
-            super();
-            Passport = passport;
-            FirstName = firstName;
-            LastName = lastName;
-            Ammount = ammount;
-            Percent = percent;
-            PretermPercent = pretermPercent;
-            TermDays = termDays;
-            StartDate = startDate;
-            WithPercentCapitalization = withPercentCapitalization;
-        }
+    public String getFirstName() {
+        return FirstName;
+    }
 
-        public String getPassport() {
-            return Passport;
-        }
+    public void setFirstName(String firstName) {
+        FirstName = firstName;
+    }
 
-        public void setPassport(String passport) {
-            Passport = passport;
-        }
+    public String getLastName() {
+        return LastName;
+    }
 
-        public String getFirstName() {
-            return FirstName;
-        }
+    public void setLastName(String lastName) {
+        LastName = lastName;
+    }
 
-        public void setFirstName(String firstName) {
-            FirstName = firstName;
-        }
+    public String getAmmount() {
+        return Ammount;
+    }
 
-        public String getLastName() {
-            return LastName;
-        }
+    public void setAmmount(String ammount) {
+        Ammount = ammount;
+    }
 
-        public void setLastName(String lastName) {
-            LastName = lastName;
-        }
+    public String getPercent() {
+        return Percent;
+    }
 
-        public String getAmmount() {
-            return Ammount;
-        }
+    public void setPercent(String percent) {
+        Percent = percent;
+    }
 
-        public void setAmmount(String ammount) {
-            Ammount = ammount;
-        }
+    public String getPretermPercent() {
+        return PretermPercent;
+    }
 
-        public String getPercent() {
-            return Percent;
-        }
+    public void setPretermPercent(String pretermPercent) {
+        PretermPercent = pretermPercent;
+    }
 
-        public void setPercent(String percent) {
-            Percent = percent;
-        }
+    public String getTermDays() {
+        return TermDays;
+    }
 
-        public String getPretermPercent() {
-            return PretermPercent;
-        }
+    public void setTermDays(String termDays) {
+        TermDays = termDays;
+    }
 
-        public void setPretermPercent(String pretermPercent) {
-            PretermPercent = pretermPercent;
-        }
+    public String getStartDate() {
+        return StartDate;
+    }
 
-        public String getTermDays() {
-            return TermDays;
-        }
+    public void setStartDate(String startDate) {
+        StartDate = startDate;
+    }
 
-        public void setTermDays(String termDays) {
-            TermDays = termDays;
-        }
+    public String getWithPercentCapitalization() {
+        return WithPercentCapitalization;
+    }
 
-        public String getStartDate() {
-            return StartDate;
-        }
-
-        public void setStartDate(String startDate) {
-            StartDate = startDate;
-        }
-
-        public String getWithPercentCapitalization() {
-            return WithPercentCapitalization;
-        }
-
-        public void setWithPercentCapitalization(String withPercentCapitalization) {
-            WithPercentCapitalization = withPercentCapitalization;
-        }
+    public void setWithPercentCapitalization(String withPercentCapitalization) {
+        WithPercentCapitalization = withPercentCapitalization;
+    }
 }

@@ -1,7 +1,7 @@
 package ManageExeptions;
 
-/*
-Ошибка неверной авторизации
+/**
+ * Исключение вызванное невыполненной авторизацией.
  */
 public class AuthException extends ManageExeption {
 

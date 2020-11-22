@@ -3,19 +3,21 @@ package DataOfBank;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * Класс представляет собой депозит.
+ * Базой данных всех депозитов является файл Accounts.csv.
+ */
 public class Deposit {
-
-
-    public Deposit(){
-    }
-
-    Client client;
+    private Client client;
     private double ammount;
     private double percent;
     private double pretermPercent;
     private int termDays;
     private Date startDate;
     private boolean withPercentCapitalization;
+
+    public Deposit(){
+    }
 
     public Deposit(Client client, double ammount, double percent, double pretermPercent, int termDays, Date startDate, boolean withPercentCapitalization) {
         this.client = client;
@@ -93,18 +95,24 @@ public class Deposit {
         return client.getPassport();
     }
 
+    /**
+     * Депозиты считаются равными, если их открыл один клиент в одно время.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Deposit deposit = (Deposit) o;
-
-
-        if (this.getClient().equals(deposit.getClient())&&
-        this.getStartDate().getTime()/1000==deposit.getStartDate().getTime()/1000
-        )return true;
+        if (this.getClient().equals(deposit.getClient()) &&
+        this.getStartDate().getTime() / 1000 == deposit.getStartDate().getTime() / 1000
+        ) return true;
         return false;
     }
 
-
+    @Override
+    public int hashCode() {
+        return Integer.parseInt(this.getClient().getPassport().substring(0,3)) * 31 +
+               Integer.parseInt(this.getClient().getPassport().substring(3,6)) * 9 +
+               (int)this.getStartDate().getTime() * 13;
+    }
 }

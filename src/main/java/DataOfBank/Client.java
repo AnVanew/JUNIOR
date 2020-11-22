@@ -3,45 +3,45 @@ package DataOfBank;
 import java.util.Objects;
 
 /*
-В классе клиента предопреелены поля и методы,
-которые обязатеьно есть у кажого клиента банка
+В классе клиента предопределены поля и методы,
+которые обязательно есть у каждого клиента банка.
  */
 public class Client {
 
-    private String FirstName;
-    private String LastName;
-    private String Passport;
+    private String firstName;
+    private String lastName;
+    private String passport;
 
     Client(){}
 
     public Client(String FirstName, String LastName, String Passport) {
-        this.FirstName=FirstName;
-        this.LastName=LastName;
-        this.Passport=Passport;
+        this.firstName = FirstName;
+        this.lastName = LastName;
+        this.passport = Passport;
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getPassport() {
-        return Passport;
+        return passport;
     }
 
     public void setPassport(String passport) {
-        Passport = passport;
+        this.passport = passport;
     }
 
     @Override
@@ -49,18 +49,21 @@ public class Client {
         return ("\n" + "Имя: " + getFirstName() + " "+ "Фамилия: "
                 + getLastName() + " " + "Серия,номер паспорта: "+getPassport());
     }
-    public String[] ClientData() {
-        String[] ClientData={getFirstName(),getLastName(),getPassport()};
-        return ClientData;
-    }
 
+    /**
+     *  Клиенты считаются равными, если имеют одинаковое значение поля passport.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Client client = (Client) o;
-        return Objects.equals(Passport, client.Passport);
+        return Objects.equals(passport, client.passport);
     }
 
-
+    @Override
+    public int hashCode() {
+        return Integer.parseInt(passport.substring(0,3)) * 31 +
+               Integer.parseInt(passport.substring(3,6)) * 9;
+    }
 }

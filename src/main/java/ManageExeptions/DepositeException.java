@@ -1,5 +1,8 @@
 package ManageExeptions;
 
+/**
+ * Исключение вызванное ошибкой при работе с депозитами.
+ */
 public class DepositeException extends ManageExeption{
 
     public DepositeException(){

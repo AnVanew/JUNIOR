@@ -1,7 +1,7 @@
 package ManageExeptions;
 
-/*
-Ошибка отсутствия токена
+/**
+ * Искючение вызванное отсутствие токена с хранилище.
  */
 public class NoTokenExeption extends ManageExeption {
 
