@@ -16,7 +16,7 @@ public class Deposit {
     private Date startDate;
     private boolean withPercentCapitalization;
 
-    public Deposit(){
+    public Deposit() {
     }
 
     public Deposit(Client client, double ammount, double percent, double pretermPercent, int termDays, Date startDate, boolean withPercentCapitalization) {
@@ -88,9 +88,11 @@ public class Deposit {
     public String getFirstName() {
         return client.getFirstName();
     }
+
     public String getLastName() {
         return client.getLastName();
     }
+
     public String getPassport() {
         return client.getPassport();
     }
@@ -104,15 +106,15 @@ public class Deposit {
         if (o == null || getClass() != o.getClass()) return false;
         Deposit deposit = (Deposit) o;
         if (this.getClient().equals(deposit.getClient()) &&
-        this.getStartDate().getTime() / 1000 == deposit.getStartDate().getTime() / 1000
+                this.getStartDate().getTime() / 1000 == deposit.getStartDate().getTime() / 1000
         ) return true;
         return false;
     }
 
     @Override
     public int hashCode() {
-        return Integer.parseInt(this.getClient().getPassport().substring(0,3)) * 31 +
-               Integer.parseInt(this.getClient().getPassport().substring(3,6)) * 9 +
-               (int)this.getStartDate().getTime() * 13;
+        return Integer.parseInt(this.getClient().getPassport().substring(0, 3)) * 31 +
+                Integer.parseInt(this.getClient().getPassport().substring(3, 6)) * 9 +
+                (int) this.getStartDate().getTime() * 13;
     }
 }

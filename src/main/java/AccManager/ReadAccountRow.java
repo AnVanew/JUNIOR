@@ -9,7 +9,8 @@ public class ReadAccountRow {
     private String userName;
     private String password;
 
-    public ReadAccountRow(){}
+    public ReadAccountRow() {
+    }
 
     public ReadAccountRow(String userName, String password) {
         this.userName = userName;

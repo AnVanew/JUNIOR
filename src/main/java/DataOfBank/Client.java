@@ -12,7 +12,8 @@ public class Client {
     private String lastName;
     private String passport;
 
-    Client(){}
+    Client() {
+    }
 
     public Client(String FirstName, String LastName, String Passport) {
         this.firstName = FirstName;
@@ -46,12 +47,12 @@ public class Client {
 
     @Override
     public String toString() {
-        return ("\n" + "Имя: " + getFirstName() + " "+ "Фамилия: "
-                + getLastName() + " " + "Серия,номер паспорта: "+getPassport());
+        return ("\n" + "Имя: " + getFirstName() + " " + "Фамилия: "
+                + getLastName() + " " + "Серия,номер паспорта: " + getPassport());
     }
 
     /**
-     *  Клиенты считаются равными, если имеют одинаковое значение поля passport.
+     * Клиенты считаются равными, если имеют одинаковое значение поля passport.
      */
     @Override
     public boolean equals(Object o) {
@@ -63,7 +64,7 @@ public class Client {
 
     @Override
     public int hashCode() {
-        return Integer.parseInt(passport.substring(0,3)) * 31 +
-               Integer.parseInt(passport.substring(3,6)) * 9;
+        return Integer.parseInt(passport.substring(0, 3)) * 31 +
+                Integer.parseInt(passport.substring(3, 6)) * 9;
     }
 }

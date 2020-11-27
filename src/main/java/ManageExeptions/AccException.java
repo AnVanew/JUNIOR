@@ -5,7 +5,7 @@ package ManageExeptions;
  */
 public class AccException extends ManageExeption {
 
-    public AccException(){
+    public AccException() {
         super("Ошибка аутентификации");
     }
 

@@ -5,11 +5,11 @@ package ManageExeptions;
  */
 public class NoTokenExeption extends ManageExeption {
 
-    public NoTokenExeption(){
+    public NoTokenExeption() {
         super("Токен не найден");
     }
 
-    public NoTokenExeption(String message){
+    public NoTokenExeption(String message) {
         super(message);
     }
 

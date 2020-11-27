@@ -15,7 +15,7 @@ public interface DepositManager {
        Метод добавляет в систему информацию о новом вкладе
      * @param pretermPercent процент при досрочном изъятии вклада
      */
-    Deposit addDeposit(Client client, double ammount, double percent, double pretermPercent, int termDays, Date startDate, boolean withPercentCapitalization,String token) throws DepositeException;
+    Deposit addDeposit(Client client, double ammount, double percent, double pretermPercent, int termDays, Date startDate, boolean withPercentCapitalization, String token) throws DepositeException;
 
     /*
       Метод возвращает список вкладов клиента
